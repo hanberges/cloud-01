@@ -1,0 +1,10 @@
+---
+- name: Perform tasks on instances
+  hosts: all
+  # become: true
+  # remote_user: cloud-user
+  gather_facts: false
+
+  roles:
+    - role: sat6register
+    #- role: osp_runonce
