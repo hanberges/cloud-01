@@ -1,0 +1,11 @@
+---
+- name: Add Nodes to Load Balancer
+  hosts: "{{ target_host }}"
+  connection: local
+
+  tasks:
+
+    - name: Ensure Nodes are present/absent in F5 Load Balancer
+      include_role:
+        name: ansible-role-f5
+        tasks_from: add_node.yml
