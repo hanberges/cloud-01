@@ -12,6 +12,6 @@
         provider:
           server: 52.166.142.17
           user: adminf5
-          password: {{ bigip_pwd }}
+          password: "{{ bigip_pwd }}"
           validate_certs: no
       delegate_to: localhost
