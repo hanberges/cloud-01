@@ -9,5 +9,6 @@
     - name: Collect all BIG-IP facts
       bigip_device_facts:
         gather_subset:
-          - all
+          - interfaces
+          - vlans
       delegate_to: localhost
