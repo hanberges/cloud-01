@@ -1,6 +1,6 @@
 ---
-- name: Add Nodes to Load Balancer
-  hosts: "{{ target_host }}"
+- name: Collect all BIG-IP facts
+  hosts: localhost
   connection: local
 
   tasks:
