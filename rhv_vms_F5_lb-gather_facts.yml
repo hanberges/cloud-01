@@ -1,0 +1,12 @@
+---
+- name: Add Nodes to Load Balancer
+  hosts: "{{ target_host }}"
+  connection: local
+
+  tasks:
+
+    - name: Collect all BIG-IP facts
+      bigip_device_facts:
+        gather_subset:
+          - all
+      delegate_to: localhost
